@@ -1,0 +1,20 @@
+{% extends 'html/base.html' %}
+{% block content %}
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">todo - edit </a>
+      <a href="{% url 'main' %}"><button class="btn btn-outline-light">HOME</button></a>
+  </div>
+</nav>
+
+<br>
+
+<div style="text-align: center;">
+  <br>
+  <form method="POST">
+    {% csrf_token %}
+    <h1>Do you want to delete? {{ delete.title }}</h1>
+    <button type="submit" value="Delete">Delete</button>
+  </form>
+</div>
+{% endblock %}

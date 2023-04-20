@@ -1,0 +1,18 @@
+{% extends 'html/base.html' %}
+{% block content %}
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">todo - detail </a>
+      <a href="{% url 'main' %}"><button class="btn btn-outline-light">HOME</button></a>
+  </div>
+</nav>
+<hr>
+<br>
+<div style="text-align: center;">
+    <img src="{{ todo.img.url }}"  class="rounded mx-auto d-block" style="with: 600px; height: 400px;" alt="detail img">
+    <h1>{{ todo.title }}</h1>
+    <hr>
+    <p><em>{{ todo.created_data }}</em></p>
+    <button class="btn btn-outline-dark">edit</button>
+</div>
+{% endblock %}
