@@ -1,0 +1,2 @@
+# todo 
+DJANGO CRUD ACTIONS
